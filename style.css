@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root{
+    --color-text: #cdc6c3;
+    --hover-color: #70efbf;
+    --neon-box-shadow: 0 0 .5rem #70efbf;
+    --index: calc(1vw + 1vh);
+}
+
+body{
+    font-family: "Outfit", sans-serif;
+    background-image: url(img/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+}
+
+/* HEADER */
+a{
+    color: #fff;
+}
+
+header{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 20px 12%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    font-weight: 600;
+    font-size: 22px;
+    color: var(--hover-color);
+}
+.logo img{
+    max-width: 100%;
+    width: 40px;
+    height: auto;
+}
+
+.navlist{
+    display: flex;
+}
+
+.navlist li{
+    margin: 0 1.5rem;
+}
+
+.navlist li .nav-item{
+    position: relative;
+    padding: 24px 0;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: all .2s ease;
+}
+
+.navlist li .nav-item:hover{
+    color: var(--hover-color);
+}
+
+.navlist li .nav-item::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 0;
+    height: 1px;
+    background: var(--hover-color);
+    border-radius: 50%;
+    transition: all .3s ease;
+}
+
+.navlist li .nav-item:hover::before{
+    width: 100%;
+}
+
+.navlist li .active{
+    color: var(--hover-color);
+    border-bottom: 1px solid var(--hover-color);
+}
