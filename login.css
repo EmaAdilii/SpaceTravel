@@ -29,7 +29,7 @@ body{
     border: 3px solid rgba(255, 255, 255, 0.3);
     border-radius: 30px;
     backdrop-filter: blur(20px);
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 .col-1{
@@ -55,4 +55,57 @@ body{
     left: 0;
     width: 400px;
 }
+
+.featured-words{
+    text-align: center;
+    color: #fff;
+    width: 300px;
+}
+.featured-words span{
+    font-weight: 600;
+    color: #70efbf;
+}
+
+
+/* Right part */
+.col-2{
+    position: relative;
+    width: 45%;
+    padding: 20px;
+}
+.btn-box{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+.btn{
+    font-weight: 500;
+    padding: 5px 30px;
+    border: none;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: .2s;
+}
+
+.btn-1{
+    background: #70efbf;
+}
+.btn:hover{
+    opacity: 0.85;
+}
+
+.login-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 4vw;
+    transition: .3s;
+}
+
+
 
