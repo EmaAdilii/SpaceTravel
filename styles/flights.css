@@ -158,6 +158,29 @@ header {
     color: #fff;
 }
 
+@keyframes floatImg {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+#planet-img {
+    width: 360px;
+    margin: -4rem auto 0 auto;
+    animation: floatImg 3s ease-in-out infinite;
+    filter: drop-shadow(0 0 .5rem #25b981);
+    border-radius: 50%;
+    margin-top: 15px;
+}
+
+
+
 .planet-img-container {
     flex: 1;
     display: flex;
