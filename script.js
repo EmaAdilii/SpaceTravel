@@ -58,4 +58,20 @@ document.addEventListener("DOMContentLoaded", () => {
         activeMenu();
         window.addEventListener("scroll", activeMenu);
     }
+
+    // Active Menu Icon
+    const menuIcon = document.querySelector("#menu-icon");
+    const navlist = document.querySelector(".navlist");
+
+    if (menuIcon && navlist) {
+        menuIcon.onclick = () => {
+            menuIcon.classList.toggle("bx-x");
+            navlist.classList.toggle("open");
+        }
+
+        window.addEventListener("scroll", () => {
+            menuIcon.classList.remove("bx-x");
+            navlist.classList.remove("open");
+        });
+    }
 });
