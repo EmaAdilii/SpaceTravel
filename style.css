@@ -367,6 +367,17 @@ img.moon-light{
     line-height: 40px;
 }
 
+/*Experience Section css------------------------*/
+
+.experience .img-mission img{
+    width: 300px;
+}
+.experience .circle-animate{
+    position: absolute;
+    left: 27%;
+    width: 150px;
+    height: 150px;
+}
 
 
 
