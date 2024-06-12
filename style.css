@@ -379,8 +379,83 @@ img.moon-light{
     height: 150px;
 }
 
+/*Footer Section css------------------------*/
+footer{
+    width: 100%;
+    height: auto;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 3rem 12%;
+    color: #fff;
+    border-top: 1px solid #561389;
+}
 
+.container-foot{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-gap: 1rem;
+}
 
+.container-foot .leftBox .social-media{
+    display: flex;
+}
+
+.container-foot .title{
+    font-size: 1.5rem;
+    color: var(--hover-color);
+    font-weight: 600;
+}
+
+.leftBox p{
+    padding: 15px 0;
+    line-height: 1.5rem;
+}
+
+.social-media a{
+    font-size: 1.5rem;
+}
+
+.social-media a:hover{
+    color: var(--hover-color);
+}
+
+.social-media li{
+    margin-right: 1rem;
+}
+
+.quick-menu li{
+    margin-top: 1rem;
+}
+
+.quick-menu li a:hover{
+    color: var(--hover-color);
+}
+
+.info li span{
+    display: flex;
+    align-items: center;
+    margin: 1rem 1rem 1rem 0;
+    column-gap: 5px;
+}
+
+.copyRight{
+    padding: 1.5rem 12%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.7);
+    border-top: 1px solid rgba(117, 117, 117, 0.3);
+}
+
+.copyRight a{
+    display: inline-flex;
+    align-items: center;
+    background: var(--hover-color);
+    border-radius: 50%;
+    padding: 10px;
+    color: #fff;
+}
 
 
 
