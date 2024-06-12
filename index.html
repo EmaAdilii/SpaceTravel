@@ -190,7 +190,7 @@
           <h3>We have 30 years of experience </h3>
           <p>With three decades of expertise, we've been at the forefront of space travel innovation, offering unparalleled services and insights to fuel humanity's journey into the cosmos. Our seasoned team brings decades of knowledge and passion to every mission, ensuring reliability, safety, and groundbreaking discoveries as we venture into the vast unknown of space.</p>
           <div class="mission-btn">
-            <a href="login.html" class="marsBtn">Join With Us</a>
+            <a href="experience.html" class="marsBtn">Get to Know Us</a>
           </div>
         </div>
        </selection>
@@ -237,6 +237,40 @@
 </div>
 
 
+<script id="shader" type="shader">
+  precision mediump float;
+
+  uniform vec2 u_mouse;
+  uniform vec2 u_resolution;
+  uniform float u_time;
+  uniform float u_strength;
+
+  uniform sampler2D uSampler;
+  varying vec2 vTextureCoord;//The coordinates of the current pixel
+
+
+  vec2 dingens(float offset) {
+    vec2 correctMouse = u_mouse;
+    correctMouse.y = u_resolution.y-u_mouse.y;
+
+    float _wave = 0.05 * u_strength * sin(0.01 * (gl_FragCoord.x + gl_FragCoord.y + u_time * 500.0 + offset * 1000.0));
+    float _dist = length(gl_FragCoord.xy/u_resolution - correctMouse/u_resolution);
+    float _inCircle = .9 - (clamp(_dist, 0., 0.2) / 0.2);
+    float _distort = _inCircle * _wave;
+
+    return (vTextureCoord + _distort);
+  }
+
+  void main(){
+
+    float red = texture2D(uSampler, dingens(1.03)).r;
+    float green = texture2D(uSampler, dingens(1.0)).g;
+    float blue = texture2D(uSampler, dingens(0.97)).b;
+
+    gl_FragColor = vec4 (red, green, blue, 1.0);
+
+  }
+</script>
     <script src="./scripts/script.js"></script>
   </body>
 </html>
