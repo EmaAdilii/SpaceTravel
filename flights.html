@@ -4,79 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SpaceTravel | Flight List</title>
-    <link rel="stylesheet" href="./styles/style.css">
+    <!-- <link rel="stylesheet" href="./styles/style.css"> -->
+    <link rel="stylesheet" href="./styles/flights.css">
 </head>
-<body>
+<body>    
     <header>
-      <a href="a" class="logo"><img src="img/logo.png" alt="" />Mars</a>
-      <uv class="navlist">
-        <li class="liLink"><a href="#home" class="nav-item active">Home</a></li>
-        <li class="liLink">
-          <a href="#flight-list" class="nav-item">Flight List</a>
-        </li>
-        <li class="liLink">
-          <a href="#mission-history" class="nav-item">Mission History</a>
-        </li>
-        <li class="liLink"><a href="#shop" class="nav-item">Shop</a></li>
-        <li class="liLink">
-          <a href="#experience" class="nav-item">Experience</a>
-        </li>
-      </uv>
-
-      <div class="right-side">
-        <a href="login.html" class="marsBtn">Login</a>
-        <div id="menu-icon" class="bx bx-menu"></div>
-      </div>
+        <a href="index.html" class="logo"><img src="img/logo.png" alt="" />Mars</a>
+        <ul class="navlist">
+            <li class="liLink"><a href="index.html#home" class="nav-item">Home</a></li>
+            <li class="liLink"><a href="index.html#flight-list" class="nav-item active">Flight List</a></li>
+            <li class="liLink"><a href="index.html#mission-history" class="nav-item">Mission History</a></li>
+            <li class="liLink"><a href="index.html#shop" class="nav-item">Shop</a></li>
+            <li class="liLink"><a href="index.html#experience" class="nav-item">Experience</a></li>
+        </ul>
+        <div class="right-side">
+            <a href="login.html" class="marsBtn">Login</a>
+            <div id="menu-icon" class="bx bx-menu"></div>
+        </div>
     </header>
-    
 
     <!-- MAIN SECTION -->
-    <section class="destination">
-        <span class="uppercase intro-text">
-          <span class="planet-number">01</span>
-          Pick your destination
-        </span>
-        <img
-          id="planet-img"
-          class="planet"
-          src="./img/moon.png"
-          alt="moon"
-        />
-      </section>
-      <section class="planet-info">
-        <ul class="planet-selectors">
-          <li data-planet="moon" class="uppercase planet-selector active">
-            Moo<span class="remove-spacing">n</span>
-          </li>
-          <li data-planet="mars" class="uppercase planet-selector">
-            Mar<span class="remove-spacing">s</span>
-          </li>
-          <li data-planet="europa" class="uppercase planet-selector">
-            Europ<span class="remove-spacing">a</span>
-          </li>
-          <li data-planet="titan" class="uppercase planet-selector">
-            Tita<span class="remove-spacing">n</span>
-          </li>
-        </ul>
-        <h1 id="planet-name" class="uppercase">Moon</h1>
-        <p id="planet-description">
-          See our planet as you’ve never seen it before. A perfect relaxing trip
-          away to help regain perspective and come back refreshed. While you’re
-          there, take in some history by visiting the Luna 2 and Apollo 11
-          landing sites.
-        </p>
-      </section>
-      <div class="distance-info">
-        <section class="flex fl-column text-center white-text">
-          <h3 class="off-white uppercase">Avg. Distance</h3>
-          <h4 id="distance" class="uppercase bellefair">384,400 km</h4>
-        </section>
-        <section class="flex fl-column text-center white-text">
-          <h3 class="off-white uppercase">Est. Travel Time</h3>
-          <h4 id="travel-time" class="uppercase bellefair">3 Days</h4>
-        </section>
-      </div>
+    <section class="main-content">
+        <div class="planet-img-container">
+            <img id="planet-img" class="planet" src="./img/moon.png" alt="moon"/>
+        </div>
+        <div class="info-container">
+            <span class="uppercase intro-text">
+                <span class="planet-number">--</span>
+                Pick your destination
+            </span>
+            <section class="planet-info">
+                <ul class="planet-selectors">
+                    <li data-planet="moon" class="uppercase planet-selector active">Moon</li>
+                    <li data-planet="mars" class="uppercase planet-selector">Mars</li>
+                    <li data-planet="mercury" class="uppercase planet-selector">Mercury</li>
+                    <li data-planet="uranus" class="uppercase planet-selector">Uranus</li>
+                </ul>
+                <h1 id="planet-name" class="uppercase">Moon</h1>
+                <p id="planet-description">See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.</p>
+            </section>
+            <div class="distance-info">
+                <section class="flex fl-column text-center white-text">
+                    <h3 class="off-white uppercase">Avg. Distance</h3>
+                    <h4 id="distance" class="uppercase bellefair">384,400 km</h4>
+                </section>
+                <section class="flex fl-column text-center white-text">
+                    <h3 class="off-white uppercase">Est. Travel Time</h3>
+                    <h4 id="travel-time" class="uppercase bellefair">3 Days</h4>
+                </section>
+            </div>
+        </div>
+    </section>
 
-      <script src="scripts/planets.js"></script>
+    <video autoplay muted loop id="bg-video">
+        <source src="./img/universe.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <script src="scripts/planets.js"></script>
 </body>
 </html>
