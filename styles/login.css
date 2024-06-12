@@ -8,7 +8,7 @@
 }
 
 .container {
-    background: url("./img/2.jpg");
+    background: url("../img/2.jpg");
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
